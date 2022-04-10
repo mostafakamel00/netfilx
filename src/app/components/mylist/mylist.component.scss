@@ -1,0 +1,60 @@
+.row {
+  margin-top: 7em;
+}
+img {
+  width: 150px;
+  max-width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.dropdown {
+  button {
+    border: unset;
+    background-color: transparent;
+    color: #999;
+  }
+  ul {
+    li {
+      cursor: pointer;
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+  }
+}
+mat-card {
+  background:transparent;
+}
+mat-card-title, mat-card-subtitle, p {
+  color: #999;
+}
+mat-card-subtitle{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+p {
+  padding-top: 15px;
+  line-height: 1.9;
+}
+.alert, .list {
+  min-height: 75vh;
+}
+.alert {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.alert-h {
+  letter-spacing: 4px;
+    text-transform: capitalize;
+    color: #e40813;
+}
+@media screen and (max-width: 350px) {
+
+    img {
+      width: 100px;
+    }
+  }

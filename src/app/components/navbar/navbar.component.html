@@ -1,0 +1,78 @@
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+  <div class="container-fluid mycont">
+    <a class="navbar-brand" href="#">
+      <img
+        src="./assets/images/logo.png"
+        alt="logo"
+        width="92px"
+        routerLink="/"
+      />
+    </a>
+    <button
+      class="navbar-toggler text-white"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <mat-icon class="navbar-toggler-icon">menu</mat-icon>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 links">
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="/" aria-current="page">
+            {{ "home" | titlecase }}
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/tv-show">
+            {{ "tv shows" | titlecase }}
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/all-movies">
+            {{ "movies" | titlecase }}
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">
+            {{ "latest" | titlecase }}
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/mylist">
+            {{ "my list" | titlecase }}
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 person_info">
+        <li class="nav-item">
+          <a class="nav-link">
+            <mat-icon>notifications</mat-icon>
+          </a>
+        </li>
+        <li class="nav-item mx-3">
+          <a class="nav-link" aria-current="page">
+            <mat-icon>search</mat-icon>
+          </a>
+        </li>
+        <li class="mode">
+          <i
+            *ngIf="darkmode"
+            (click)="darkMode()"
+            class="fa-solid fa-moon item-mode"
+          ></i>
+          <i
+            *ngIf="whitemode"
+            (click)="whiteMode()"
+            class="fa-solid fa-sun item-mode"
+          ></i>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

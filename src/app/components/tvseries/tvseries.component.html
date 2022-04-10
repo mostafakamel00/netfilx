@@ -1,0 +1,22 @@
+<div class="container-fluid">
+  <div class="thumbnail">
+    <p class="headowl ps-lg-3">TV Series</p>
+    <owl-carousel-o [options]="customOptions">
+      <ng-container *ngFor="let u of TVSeries">
+        <ng-template carouselSlide [id]="u.id">
+          <div class="top-rated">
+            <img
+              class="w-100 carousel"
+              [src]="imgPrefix + u.poster_path"
+              [alt]="u.title"
+            />
+            <i class="fa-solid fa-star"> </i>
+            <span class="vote">
+              {{ u.vote_average }}
+            </span>
+          </div>
+        </ng-template>
+      </ng-container>
+    </owl-carousel-o>
+  </div>
+</div>

@@ -1,0 +1,160 @@
+<ng-container *ngIf="!!movieDetails">
+  <div class="details">
+    <div class="moviedetails">
+      <app-navbar></app-navbar>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 content">
+            <!--the Film name-->
+            <h3 class="">
+              <span class="title"> Name : </span>
+              <span class="ps-2 info">{{ movieDetails?.title }}</span>
+            </h3>
+            <!--Vote-->
+            <ng-template #votecontent>
+              <p>
+                <span class="title">Vote :</span>
+                <span class="ps-2 info">
+                  {{ movieDetails?.vote_average }}/10
+                </span>
+              </p>
+            </ng-template>
+            <p *ngIf="movieDetails?.vote_average == ''; else votecontent">
+              <span class="title">Vote :</span>
+              <span class="ps-2" [ngStyle]="defultColorErr">
+                We Have not any info about this right now
+              </span>
+            </p>
+            <!--Mat accordion-->
+            <mat-accordion>
+              <mat-expansion-panel hideToggle>
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    <mat-icon color="primary">expand_more</mat-icon>
+                    <span class="ms-2">More Info</span>
+                  </mat-panel-title>
+                </mat-expansion-panel-header>
+                <!--the genres Film-->
+                <p class="my-lg-4" *ngIf="movieDetails?.genres.length == 3">
+                  <span class="genres">
+                    {{ movieDetails?.genres[0]?.name }}
+                  </span>
+                  <span class="mx-2 genres">
+                    {{ movieDetails?.genres[1]?.name }}
+                  </span>
+                  <span class="genres">
+                    {{ movieDetails?.genres[2]?.name }}
+                  </span>
+                </p>
+                <p class="my-lg-4" *ngIf="movieDetails?.genres.length == 2">
+                  <span class="genres">
+                    {{ movieDetails?.genres[0]?.name }}
+                  </span>
+                  <span class="mx-2 genres">
+                    {{ movieDetails?.genres[1]?.name }}
+                  </span>
+                </p>
+                <p class="my-lg-4" *ngIf="movieDetails?.genres.length == 1">
+                  <span class="genres">
+                    {{ movieDetails?.genres[0]?.name }}
+                  </span>
+                </p>
+
+                <!--Country-->
+                <p class="">
+                  <span class="title">Country of origin : </span>
+                  <span class="ps-2 info">{{
+                    movieDetails?.production_countries[0]?.name
+                  }}</span>
+                </p>
+                <p
+                  class=""
+                  *ngIf="movieDetails?.production_countries.length == '0'"
+                >
+                  <span class="title">Country of origin : </span>
+                  <span class="ps-2" [ngStyle]="defultColorErr">
+                    We Have not any info about this right now
+                  </span>
+                </p>
+                <!--production companies-->
+                <p *ngIf="movieDetails?.production_companies.length == 3">
+                  <span class="title">Production companies :</span>
+                  <span class="ps-2 info">
+                    {{ movieDetails?.production_companies[0]?.name }},
+                    {{ movieDetails?.production_companies[1]?.name }},
+                    {{ movieDetails?.production_companies[2]?.name }}
+                  </span>
+                </p>
+                <p *ngIf="movieDetails?.production_companies.length == 2">
+                  <span class="title">Production companies :</span>
+                  <span class="ps-2 info">
+                    {{ movieDetails?.production_companies[0]?.name }},
+                    {{ movieDetails?.production_companies[1]?.name }},
+                  </span>
+                </p>
+                <p *ngIf="movieDetails?.production_companies.length == 1">
+                  <span class="title">Production companies :</span>
+                  <span class="ps-2 info">
+                    {{ movieDetails?.production_companies[0]?.name }},
+                  </span>
+                </p>
+                <p *ngIf="movieDetails?.production_companies.length == 0">
+                  <span class="title">Production companies :</span>
+                  <span class="ps-2" [ngStyle]="defultColorErr">
+                    We Have not any info about this right now
+                  </span>
+                </p>
+                <!--Official site -->
+                <ng-template #homecontent>
+                  <p>
+                    <span class="title">Official site :</span>
+                    <span class="ps-2">
+                      <a target="_blank" href="{{ movieDetails?.homepage }}">{{
+                        movieDetails.homepage
+                      }}</a>
+                    </span>
+                  </p>
+                </ng-template>
+                <p *ngIf="movieDetails?.homepage == ''; else homecontent">
+                  <span class="title">Official site :</span>
+                  <span class="ps-2" [ngStyle]="defultColorErr">
+                    We Have not any info about this right now
+                  </span>
+                </p>
+                <!--OverView-->
+                <ng-template #overcontent>
+                  <p class="lh-lg">
+                    <span class="title">overView :</span>
+                    <span class="ps-2 info">
+                      {{ movieDetails?.overview }}
+                    </span>
+                  </p>
+                </ng-template>
+                <p
+                  class="lh-lg"
+                  *ngIf="movieDetails?.overview == ''; else overcontent"
+                >
+                  <span class="title">overView :</span>
+                  <span class="ps-2" [ngStyle]="defultColorErr">
+                    We Have not any info about this right now
+                  </span>
+                </p>
+              </mat-expansion-panel>
+            </mat-accordion>
+            <!--Mat accordion-->
+          </div>
+          <div class="col-md-4 image">
+            <img
+              class="ms-md-3 me-5"
+              src="{{ imgPrefix + movieDetails?.poster_path }}"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <app-footer></app-footer>
+  </div>
+</ng-container>

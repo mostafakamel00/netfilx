@@ -1,0 +1,60 @@
+.links {
+  li {
+    margin-right: 10px;
+    a {
+      transition: all .2s ease-in-out;
+      &:hover {
+        color: red !important;
+      }
+    }
+  }
+}
+.person_info {
+  align-items: center;
+}
+ul {
+  list-style: none;
+ }
+ li {
+  display: inline;
+
+}
+a {
+  text-decoration: none;
+  color: #999 !important;
+  cursor: pointer;
+
+}
+.mat-icon {
+  color: #999;
+}
+.navbg {
+  transition: all .2s ease-in-out;
+  background-color: #212529;
+  height: 66px;
+  border-bottom: 1px solid #999;
+}
+.fixed-top {
+  transition: all .2s ease-in-out;
+  padding-top: 0;
+}
+.mode {
+  cursor: pointer;
+  color: #999;
+}
+.item-mode {
+  font-size: 20px;
+}
+
+
+@media screen and (max-width: 991px) {
+  .mycont {
+  background-color: #212529;
+
+  }
+  .person_info {
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+  }
+}

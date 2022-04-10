@@ -1,0 +1,26 @@
+<div class="container-fluid">
+  <div class="thumbnail">
+    <p class="headowl ps-lg-3">Playing Now</p>
+    <owl-carousel-o [options]="customOptions">
+      <ng-container *ngFor="let u of playingNow; let i = index">
+        <ng-template carouselSlide [id]="u.id">
+          <div class="top-rated">
+            <img
+              class="w-100 carousel"
+              [src]="imgPrefix + u.poster_path"
+              [alt]="u.title"
+              [routerLink]="['/get', u.id]"
+            />
+            <button class="addcard" mat-flat-button (click)="addToCard(i)">
+              <mat-icon color="accent">add_circle</mat-icon>
+            </button>
+            <i class="fa-solid fa-star"> </i>
+            <span class="vote">
+              {{ u.vote_average }}
+            </span>
+          </div>
+        </ng-template>
+      </ng-container>
+    </owl-carousel-o>
+  </div>
+</div>

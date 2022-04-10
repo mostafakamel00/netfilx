@@ -1,0 +1,209 @@
+<div class="pb-5">
+  <app-navbar></app-navbar>
+</div>
+<div class="play mt-5">
+  <div class="container-fluid">
+    <div
+      class="row"
+      data-aos="fade-zoom-in"
+      data-aos-easing="ease-in-back"
+      data-aos-duration="1500"
+      data-aos-offset="0"
+    >
+      <div class="col-lg-4 col-md-4 col-sm-6" *ngFor="let u of play">
+        <div class="card mb-3" style="max-width: 540px">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img
+                src="{{ imgPrefix + u.poster_path }}"
+                class="img-fluid rounded-start"
+                alt="..."
+              />
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">{{ u.original_title }}</h5>
+                <p class="card-text" *ngIf="u.overview == ''; else overview">
+                  {{ "we have not this info right now" | titlecase }}
+                </p>
+                <ng-template #overview>
+                  <p class="card-text">
+                    {{ u.overview }}
+                  </p>
+                </ng-template>
+
+                <p class="vote">
+                  {{ u.vote_average }}/10
+                  <span>
+                    <mat-icon>star_border</mat-icon>
+                  </span>
+                </p>
+                <p class="card-text">
+                  <small class="text-muted"
+                    >Release Date: {{ u.release_date }}</small
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-6" *ngFor="let u of top">
+        <div class="card mb-3" style="max-width: 540px">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img
+                src="{{ imgPrefix + u.poster_path }}"
+                class="img-fluid rounded-start"
+                alt="..."
+              />
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">{{ u.original_title }}</h5>
+                <p class="card-text" *ngIf="u.overview == ''; else overview">
+                  {{ "we have not this info right now" | titlecase }}
+                </p>
+                <ng-template #overview>
+                  <p class="card-text">
+                    {{ u.overview }}
+                  </p>
+                </ng-template>
+
+                <p class="vote">
+                  {{ u.vote_average }}/10
+                  <span>
+                    <mat-icon>star_border</mat-icon>
+                  </span>
+                </p>
+                <p class="card-text">
+                  <small class="text-muted"
+                    >Release Date: {{ u.release_date }}</small
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-6" *ngFor="let u of trend">
+        <div class="card mb-3" style="max-width: 540px">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img
+                src="{{ imgPrefix + u.poster_path }}"
+                class="img-fluid rounded-start"
+                alt="..."
+              />
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">{{ u.original_title }}</h5>
+                <p class="card-text" *ngIf="u.overview == ''; else overview">
+                  {{ "we have not this info right now" | titlecase }}
+                </p>
+                <ng-template #overview>
+                  <p class="card-text">
+                    {{ u.overview }}
+                  </p>
+                </ng-template>
+
+                <p class="vote">
+                  {{ u.vote_average }}/10
+                  <span>
+                    <mat-icon>star_border</mat-icon>
+                  </span>
+                </p>
+                <p class="card-text">
+                  <small class="text-muted"
+                    >Release Date: {{ u.release_date }}</small
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-6" *ngFor="let u of popular">
+        <div class="card mb-3" style="max-width: 540px">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img
+                src="{{ imgPrefix + u.poster_path }}"
+                class="img-fluid rounded-start"
+                alt="..."
+              />
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">{{ u.original_title }}</h5>
+                <p class="card-text" *ngIf="u.overview == ''; else overview">
+                  {{ "we have not this info right now" | titlecase }}
+                </p>
+                <ng-template #overview>
+                  <p class="card-text">
+                    {{ u.overview }}
+                  </p>
+                </ng-template>
+
+                <p class="vote">
+                  {{ u.vote_average }}/10
+                  <span>
+                    <mat-icon>star_border</mat-icon>
+                  </span>
+                </p>
+                <p class="card-text">
+                  <small class="text-muted"
+                    >Release Date: {{ u.release_date }}</small
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-6" *ngFor="let u of upcoming">
+        <div class="card mb-3" style="max-width: 540px">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img
+                src="{{ imgPrefix + u.poster_path }}"
+                class="img-fluid rounded-start"
+                alt="..."
+              />
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">{{ u.original_title }}</h5>
+                <p class="card-text" *ngIf="u.overview == ''; else overview">
+                  {{ "we have not this info right now" | titlecase }}
+                </p>
+                <ng-template #overview>
+                  <p class="card-text">
+                    {{ u.overview }}
+                  </p>
+                </ng-template>
+
+                <p class="vote">
+                  {{ u.vote_average }}/10
+                  <span>
+                    <mat-icon>star_border</mat-icon>
+                  </span>
+                </p>
+                <p class="card-text">
+                  <small class="text-muted"
+                    >Release Date: {{ u.release_date }}</small
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer pt-5">
+    <mat-divider class="pb-3"></mat-divider>
+    <app-footer></app-footer>
+  </div>
+</div>

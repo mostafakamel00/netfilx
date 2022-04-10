@@ -1,0 +1,27 @@
+.header {
+  background: url(../../../assets/images/header.jpg) top center no-repeat;
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  .head {
+    transform: translateY(400px);
+    h2 {
+      font-size: 39px;
+      font-weight: 600;
+      color: #999;
+      font-style: italic;
+      letter-spacing: 2px;
+      margin-bottom: 30px;
+    }
+  }
+}
+.overlay {
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+}
+// @media screen and (max-width: 1400px) {
+//   .head {
+//     transform: translateY(200px) !important;
+//   }
+// }

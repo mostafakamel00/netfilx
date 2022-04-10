@@ -1,0 +1,23 @@
+<div class="movie">
+  <div class="container movie_image">
+    <div class="thumbnails">
+      <p class="headowlaa text-center">Upcoming</p>
+      <owl-carousel-o [options]="customOptionsTwo">
+        <ng-container *ngFor="let u of upcoming; let i = index">
+          <ng-template carouselSlide [id]="u.id">
+            <img
+              class="w-100 carousel-img"
+              [src]="imgPrefix + u.poster_path"
+              [alt]="u.title"
+              [routerLink]="['/get', u.id]"
+            />
+
+            <button mat-flat-button class="addcard" (click)="addToCart(i)">
+              <mat-icon color="accent">add_circle</mat-icon>
+            </button>
+          </ng-template>
+        </ng-container>
+      </owl-carousel-o>
+    </div>
+  </div>
+</div>

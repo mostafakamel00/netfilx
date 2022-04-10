@@ -1,0 +1,25 @@
+<div
+  class="header"
+  [ngStyle]="{
+    'background-image': ' url(' + headerBGUrl + ')'
+  }"
+>
+  <div class="overlay">
+    <div class="container-fluid">
+      <!--Start NavBar-->
+      <app-navbar></app-navbar>
+    </div>
+    <!--End NavBar-->
+    <div class="head container-fluid">
+      <h2>{{ title }}</h2>
+      <button class="me-2" mat-flat-button>
+        <mat-icon>arrow_right</mat-icon>
+        Playing
+      </button>
+      <button mat-flat-button>
+        <mat-icon>info</mat-icon>
+        More Info
+      </button>
+    </div>
+  </div>
+</div>

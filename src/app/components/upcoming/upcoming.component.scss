@@ -1,0 +1,35 @@
+.movie {
+  .thumbnails {
+    transform: translateY(-200px);
+
+  }
+}
+.headowlaa {
+  color: #999;
+  padding-bottom: 20px;
+  font: {
+    size: 27px;
+    style: italic;
+    weight: 600
+  }
+}
+.carousel-img{
+  border-top-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .thumbnails {
+    transform: translateY(0px) !important;
+    padding: 20px 0;
+  }
+  .carousel-img {
+    height: 179px !important;
+  }
+}
+@media screen and (max-width: 500px) {
+
+  .carousel-img {
+    height: 179px !important;
+  }
+}

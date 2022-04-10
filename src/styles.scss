@@ -1,0 +1,44 @@
+/* You can add global styles to this file, and also import other style files */
+
+// html, body { height: 100%; }
+body {
+  margin: 0;
+   font-family: Roboto, "Helvetica Neue", sans-serif;
+   background-color: #212529;
+  }
+  .headowl {
+    background: linear-gradient(10deg,green,red , pink);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-bottom: 20px;
+    font: {
+      size: 27px;
+      style: italic;
+      weight: 600
+    }
+    }
+    .top-rated {
+      position: relative;
+      i {
+        position: absolute;
+        color: #ffeb3b;
+        top: 5px;
+        right: 5px;
+        font-size: 20px;
+      }
+      .vote {
+        position: absolute;
+      top: 7px;
+      color: black;
+      right: 10px;
+      font-size: 10px;
+      font-weight: 900;
+      }
+    }
+.carousel {
+  border-radius: 10px;
+  cursor: pointer;
+}
+.addcard {
+  background: transparent;
+}
