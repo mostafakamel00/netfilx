@@ -9,6 +9,7 @@ import { MovieService } from '../../services/movie.service';
 })
 export class TvShowComponent implements OnInit {
   tvShow: any[] = [];
+  sppiner: boolean = true;
   imgPrefix: string = 'https://image.tmdb.org/t/p/w500';
   constructor(private movie: MovieService, private title: Title) {
     title.setTitle('TV-ShowPage');
@@ -19,6 +20,9 @@ export class TvShowComponent implements OnInit {
   }
   getTv() {
     this.movie.getTVSeries().subscribe((res) => {
+      if (res) {
+        this.sppiner = false;
+      }
       this.tvShow = res.results;
       // console.log(res);
     });

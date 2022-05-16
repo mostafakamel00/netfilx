@@ -1,7 +1,7 @@
 <div
   class="header"
   [ngStyle]="{
-    'background-image': ' url(' + headerBGUrl + ')'
+    'background-image': 'url(' + headerBGUrl + ')'
   }"
 >
   <div class="overlay">
@@ -16,7 +16,7 @@
         <mat-icon>arrow_right</mat-icon>
         Playing
       </button>
-      <button mat-flat-button>
+      <button mat-flat-button [routerLink]="['/get', id]">
         <mat-icon>info</mat-icon>
         More Info
       </button>

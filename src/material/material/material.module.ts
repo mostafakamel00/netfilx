@@ -6,6 +6,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCardModule } from '@angular/material/card';
+import { MatInputModule } from '@angular/material/input';
 
 const material = [
   MatButtonModule,
@@ -15,6 +16,7 @@ const material = [
   MatExpansionModule,
   MatFormFieldModule,
   MatCardModule,
+  MatInputModule,
 ];
 
 @NgModule({

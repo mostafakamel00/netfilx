@@ -1,0 +1,10 @@
+::ng-deep .owl-nav .owl-prev, ::ng-deep .owl-nav .owl-next{
+  background: darkred!important;
+  opacity: .5;
+  font-size: 20px !important;
+transition: all .2s ease-in-out;
+  &:hover {
+    background: red!important;
+    opacity: 1;
+  }
+}

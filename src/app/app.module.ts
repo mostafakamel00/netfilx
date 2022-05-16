@@ -22,7 +22,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { MylistComponent } from './components/mylist/mylist.component';
 import { TvShowComponent } from './components/tv-show/tv-show.component';
 import { AllMoviesComponent } from './components/all-movies/all-movies.component';
-import { NgxPaginationModule } from 'ngx-pagination';
+import { FormsModule } from '@angular/forms';
+import { NgxPaginationModule } from 'ngx-pagination'; // <-- import the module
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
     MaterialModule,
     CarouselModule,
     HttpClientModule,
+    FormsModule,
     NgxPaginationModule,
   ],
   providers: [],

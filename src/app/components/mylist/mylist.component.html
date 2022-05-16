@@ -1,4 +1,4 @@
-<div class="mylist">
+<div class="mylist" *ngIf="!sppiner">
   <app-navbar></app-navbar>
   <div class="container-fluid">
     <div class="list">
@@ -66,4 +66,7 @@
     <mat-divider class="pb-3"></mat-divider>
     <app-footer></app-footer>
   </div>
+</div>
+<div class="spinner" *ngIf="sppiner">
+  <span> loading... </span>
 </div>

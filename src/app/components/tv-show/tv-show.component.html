@@ -1,17 +1,16 @@
 <div class="pb-5">
   <app-navbar></app-navbar>
 </div>
-<div class="tv-show mt-5">
+<div class="tv-show mt-5" *ngIf="!sppiner">
   <div class="container-fluid">
-    <div class="row">
-      <div
-        class="col-md-4 col-sm-6"
-        *ngFor="let u of tvShow"
-        data-aos="fade-zoom-in"
-        data-aos-easing="ease-in-back"
-        data-aos-duration="1500"
-        data-aos-offset="0"
-      >
+    <div
+      class="row"
+      data-aos="fade-zoom-in"
+      data-aos-easing="ease-in-back"
+      data-aos-duration="1500"
+      data-aos-offset="0"
+    >
+      <div class="col-md-4 col-sm-6" *ngFor="let u of tvShow">
         <div class="card mb-3" style="max-width: 540px">
           <div class="row g-0">
             <div class="col-md-4">
@@ -55,4 +54,7 @@
     <mat-divider class="pb-3"></mat-divider>
     <app-footer></app-footer>
   </div>
+</div>
+<div class="spinner" *ngIf="sppiner">
+  <span> loading... </span>
 </div>

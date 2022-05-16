@@ -27,11 +27,14 @@ export class TrendingComponent implements OnInit {
     mouseDrag: true,
     touchDrag: true,
     pullDrag: true,
-    dots: true,
+    dots: false,
     margin: 8,
     navSpeed: 700,
 
-    navText: ['', ''],
+    navText: [
+      '<i class="fa-solid fa-angle-left"></i>',
+      '<i class="fa-solid fa-angle-right"></i>',
+    ],
     responsive: {
       0: {
         items: 1,
@@ -43,10 +46,10 @@ export class TrendingComponent implements OnInit {
         items: 3,
       },
       940: {
-        items: 7,
+        items: 9,
       },
     },
-    nav: false,
+    nav: true,
   };
   addToCard(i: any) {
     if (localStorage.getItem('token')) {

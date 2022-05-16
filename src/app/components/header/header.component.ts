@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { MovieService } from '../../services/movie.service';
 
@@ -7,11 +8,13 @@ import { MovieService } from '../../services/movie.service';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  headerBGUrl!: string;
+  headerBGUrl!: any;
   title!: string;
+  id!: number;
   trending!: any;
+  imgPrefix: string = 'https://image.tmdb.org/t/p/original';
 
-  constructor(private movie: MovieService) {}
+  constructor(private movie: MovieService, private router: Router) {}
 
   ngOnInit(): void {
     this.getUpcoming();
@@ -21,9 +24,9 @@ export class HeaderComponent implements OnInit {
       this.trending = res;
       const item = Math.floor(Math.random() * this.trending.results.length);
       this.title = this.trending.results[item].original_title;
+      this.id = this.trending.results[item].id;
       this.headerBGUrl =
-        'https://image.tmdb.org/t/p/original' +
-        this.trending.results[item].backdrop_path;
+        this.imgPrefix + this.trending.results[item].backdrop_path;
     });
   }
 }

@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MylistComponent implements OnInit {
   mylist: any[] = [];
+  sppiner: boolean = true;
+
   imgPrefix: string = 'https://image.tmdb.org/t/p/original';
 
   constructor(private title: Title) {
@@ -17,6 +19,7 @@ export class MylistComponent implements OnInit {
   ngOnInit(): void {
     if (localStorage.getItem('token') !== null) {
       this.mylist = JSON.parse(localStorage.getItem('token')!);
+      this.sppiner = false;
     }
   }
   deleteItem(i: any) {

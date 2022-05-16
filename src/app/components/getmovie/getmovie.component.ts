@@ -13,6 +13,7 @@ export class GetmovieComponent implements OnInit {
   id: any;
   panelOpenState = false;
   movieDetails: any;
+  sppiner: boolean = true;
   imgPrefix: string = 'https://image.tmdb.org/t/p/w500';
   defultColorErr = {
     color: '#ff000042',
@@ -34,6 +35,9 @@ export class GetmovieComponent implements OnInit {
     this.movie.getMoviesDetails(this.id).subscribe(
       (res) => {
         // console.log(res);
+        if (res) {
+          this.sppiner = false;
+        }
         this.movieDetails = res;
       },
       (err) => {

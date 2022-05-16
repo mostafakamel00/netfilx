@@ -1,5 +1,5 @@
 import { MovieService } from './../../services/movie.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import Swal from 'sweetalert2';
 
@@ -35,7 +35,10 @@ export class UpcomingComponent implements OnInit {
     autoplay: true,
     autoplayTimeout: 3000,
 
-    navText: ['', ''],
+    navText: [
+      '<i class="fa-solid fa-angle-left"></i>',
+      '<i class="fa-solid fa-angle-right"></i>',
+    ],
     responsive: {
       0: {
         items: 1,
@@ -50,7 +53,7 @@ export class UpcomingComponent implements OnInit {
         items: 5,
       },
     },
-    nav: false,
+    nav: true,
   };
   addToCart(i: any) {
     if (localStorage.getItem('token')) {

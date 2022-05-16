@@ -1,4 +1,4 @@
-<ng-container *ngIf="!!movieDetails">
+<ng-container *ngIf="!sppiner">
   <div class="details">
     <div class="moviedetails">
       <app-navbar></app-navbar>
@@ -158,3 +158,6 @@
     <app-footer></app-footer>
   </div>
 </ng-container>
+<div class="spinner" *ngIf="sppiner">
+  <span> loading... </span>
+</div>

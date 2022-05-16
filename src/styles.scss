@@ -42,3 +42,54 @@ body {
 .addcard {
   background: transparent;
 }
+
+//spinner
+
+.spinner {
+  height: calc(100vh - 79px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  span {
+  color: white;
+    z-index: 1;
+    position: relative;
+    font-style: italic;
+    font-size: 80px;
+    letter-spacing: 5px;
+    line-height: 1;
+    text-transform: uppercase;
+    &::before {
+      content: "";
+      position:absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100px;
+      mix-blend-mode: difference;
+      background-color: white;
+      animation: move 4s linear infinite;
+
+    }
+  }
+}
+
+@keyframes move {
+  0%, 100% {
+    left:0
+  }
+  50% {
+    left: calc(100% - 100px)
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+  .spinner span {
+    font-size: 40px;
+  }
+  .spinner span::before {
+    animation: move 3s linear infinite;
+  }
+}
+
