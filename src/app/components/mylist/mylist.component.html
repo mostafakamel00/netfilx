@@ -32,7 +32,7 @@
               <mat-card-title>{{ u.title }}</mat-card-title>
 
               <mat-card-subtitle
-                >{{ u.vote_average }}/10
+                >{{ u.vote_average | number: "1.0-1" }}/10
                 <span>
                   <mat-icon>star_border</mat-icon>
                 </span>

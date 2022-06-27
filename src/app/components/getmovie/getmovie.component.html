@@ -15,7 +15,7 @@
               <p>
                 <span class="title">Vote :</span>
                 <span class="ps-2 info">
-                  {{ movieDetails?.vote_average }}/10
+                  {{ movieDetails?.vote_average | number: "1.0-1" }}/10
                 </span>
               </p>
             </ng-template>

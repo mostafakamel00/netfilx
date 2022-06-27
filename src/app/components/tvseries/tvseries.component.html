@@ -12,7 +12,7 @@
             />
             <i class="fa-solid fa-star"> </i>
             <span class="vote">
-              {{ u.vote_average }}
+              {{ u.vote_average | number: "1.0-1" }}
             </span>
           </div>
         </ng-template>

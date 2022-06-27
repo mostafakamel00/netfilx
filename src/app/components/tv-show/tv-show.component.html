@@ -33,7 +33,7 @@
                 </ng-template>
 
                 <p class="vote">
-                  {{ u.vote_average }}/10
+                  {{ u.vote_average | number: "1.0-1" }}/10
                   <span>
                     <mat-icon>star_border</mat-icon>
                   </span>
