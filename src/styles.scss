@@ -93,3 +93,16 @@ body {
   }
 }
 
+
+@media screen and (max-width: 768px) {
+
+  .owl-carousel .owl-item img {
+    height: 50vh;
+  }
+}
+@media screen and (max-width: 500px) {
+
+  .owl-carousel .owl-item img {
+    height: 50vh;
+  }
+}

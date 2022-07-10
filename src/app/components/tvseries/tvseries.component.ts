@@ -25,7 +25,7 @@ export class TvseriesComponent implements OnInit {
     mouseDrag: true,
     touchDrag: true,
     pullDrag: true,
-    dots: true,
+    dots: false,
     margin: 8,
     navSpeed: 700,
 

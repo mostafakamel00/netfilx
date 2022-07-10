@@ -29,7 +29,7 @@ export class UpcomingComponent implements OnInit {
     mouseDrag: true,
     touchDrag: true,
     pullDrag: false,
-    dots: true,
+    dots: false,
     margin: 8,
     navSpeed: 700,
     autoplay: true,
